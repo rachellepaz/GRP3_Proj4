@@ -95,7 +95,7 @@ while True:
             "************************************************************************"
         )
 
-        print(Fore.GREEN + "For Staus Code: " + str(json_status) +
+        print(Fore.GREEN + "For Staus Codes: " + str(json_status) +
               "; Refer to:")
 
         print(
