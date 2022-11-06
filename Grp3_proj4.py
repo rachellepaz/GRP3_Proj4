@@ -9,15 +9,15 @@ now = date.today()
 
 name = input(Fore.BLUE + "Enter your name: ")
 print("                                              ")
-print(Fore.RED + "Class A: CAR \n, Sedan \n, Mini-Van \n, Motorcycle \n")
-print(Fore.RED + "Class B: Bus\n, Truck \n")
-print(Fore.RED + "Class C: Container Truck \n, Jet\n")
+print(Fore.RED + "Class A: Car \n, Sedan \n, Mini-Van \n, Motorbike \n")
+print(Fore.RED + "Class B: Bus\n, Mini-Bus \n")
+print(Fore.RED + "Class C: Container Truck \n, Private Limousine\n")
 print("                                              ")
-vehicle = input(Fore.BLUE + "Input what type of class of vehicles (1-3): ")
+vehicle = input(Fore.BLUE + "Input what type of class of vehicles (A-C): ")
 print("                                              ")
-car = input(Fore.BLUE + "What is your car?: ")
+car = input(Fore.BLUE + "Enter brand: ")
 print("                                              ")
-plate = input(Fore.BLUE + "Please enter your plate number: ")
+plate = input(Fore.BLUE + "Plate Number: ")
 print("                                              ")
 
 while True:
@@ -53,46 +53,51 @@ while True:
               " = A successful route call.\n")
         print(Fore.RED + "=============================================")
         print(Fore.GREEN + " GROUP 3 of 4ITH")
-        print(Fore.GREEN + "The Date Today is: ")
+        print(Fore.GREEN + "Date: ")
         print(now)
-        print(Fore.RED + "**********************************************")
+        print(Fore.RED + "-------------------------------------------------*")
         print("                                              ")
         print(Fore.GREEN + "Hello, " + (name))
-        print(Fore.GREEN + "Class of your vehicle is " + (vehicle))
-        print(Fore.GREEN + "You own a " + (car))
-        print(Fore.GREEN + "Your plate number is:  " + (plate))
+        print(Fore.GREEN + "Vehicle Class: " + (vehicle))
+        print(Fore.GREEN + "Vehicle: " + (car))
+        print(Fore.GREEN + "Plate Number:  " + (plate))
         print("                                              ")
         print(Fore.GREEN + "Directions from " + (orig) + " to " + (dest))
-        print(Fore.GREEN + "Trip Duration:   " +
+        print(Fore.GREEN + "Duration of Trip:   " +
               (json_data["route"]["formattedTime"]))
         print(Fore.GREEN + "Kilometers:      " +
               str("{:.2f}".format((json_data["route"]["distance"]) * 1.61)))
         print(Fore.GREEN + "Fuel Used (Liter): " +
               str("{:.2f}".format((json_data["route"]["distance"]) * 3.78)))
-        print(Fore.GREEN + "Fuel Cost (USD): " +
+        print(Fore.GREEN + "Fuel Cost ($): " +
               str("{:.2f}".format((json_data["route"]["distance"]) * 3.78 *
                                   (1.038))))
         print("                                              ")
         print(Fore.RED + "=============================================")
     elif json_status == 402:
-        print(Fore.RED + "**********************************************")
 
         print(Fore.GREEN + "Status Code: " + str(json_status) +
-              "; Invalid user inputs for one or both locations.")
+              "; Error! Invalid user inputs for one or both locations.")
 
-        print(Fore.RED + "**********************************************\n")
+        print(
+            Fore.RED +
+            "-------------------------------------------------------------------------\n"
+        )
 
     elif json_status == 611:
-        print(Fore.RED + "**********************************************")
+        print(
+            Fore.RED +
+            "----------------------------------------------------------------")
 
         print(Fore.GREEN + "Status Code: " + str(json_status) +
-              "; Missing an entry for one or both locations.")
+              "; Error! Missing an entry for one or both locations.")
 
-        print(Fore.RED + "**********************************************\n")
+        print(Fore.RED +
+              "-----------------------------------------------------------\n")
     else:
         print(
             Fore.RED +
-            "************************************************************************"
+            "-------------------------------------------------------------------------"
         )
 
         print(Fore.GREEN + "For Staus Codes: " + str(json_status) +
@@ -105,5 +110,5 @@ while True:
 
         print(
             Fore.RED +
-            "************************************************************************\n"
+            "-------------------------------------------------------------------------\n"
         )
