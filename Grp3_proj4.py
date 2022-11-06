@@ -57,7 +57,7 @@ while True:
         print(now)
         print(Fore.RED + "-------------------------------------------------*")
         print("                                              ")
-        print(Fore.GREEN + "Hello, " + (name))
+        print(Fore.GREEN + "Hello there, " + (name))
         print(Fore.GREEN + "Vehicle Class: " + (vehicle))
         print(Fore.GREEN + "Vehicle: " + (car))
         print(Fore.GREEN + "Plate Number:  " + (plate))
