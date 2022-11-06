@@ -52,7 +52,7 @@ while True:
         print(Fore.GREEN + "API Status: " + str(json_status) +
               " = A successful route call.\n")
         print(Fore.RED + "=============================================")
-        print(Fore.GREEN + " GROUP 3 of 4ITH")
+        print(Fore.GREEN + " GROUP 3 of 4ITH - VEHICLE AND TRIP CALC")
         print(Fore.GREEN + "Date: ")
         print(now)
         print(Fore.RED + "-------------------------------------------------*")
@@ -65,6 +65,7 @@ while True:
         print(Fore.GREEN + "Directions from " + (orig) + " to " + (dest))
         print(Fore.GREEN + "Duration of Trip:   " +
               (json_data["route"]["formattedTime"]))
+
         print(Fore.GREEN + "Kilometers:      " +
               str("{:.2f}".format((json_data["route"]["distance"]) * 1.61)))
         print(Fore.GREEN + "Fuel Used (Liter): " +
